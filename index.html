@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Impressive Webpage</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff5f6d;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    .btn:hover {
+      background-color: #ff888f;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #ff5f6d;
+    }
+
+    p {
+      color: #333;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Impressive Webpage</h1>
+    <p>This webpage showcases various elements to impress you!</p>
+    <button class="btn" onclick="changeImage()">Click Me!</button>
+    <img id="catImage" src="https://placekitten.com/400/300" alt="Cute Kitten" width="400" height="300">
+  </div>
+
+  <script>
+    // JavaScript code
+    var images = [
+      'https://placekitten.com/400/300',
+      'https://placekitten.com/500/350',
+      'https://placekitten.com/450/320',
+      'https://placekitten.com/420/280'
+    ];
+    var currentIndex = 0;
+
+    function changeImage() {
+      var image = document.getElementById('catImage');
+      currentIndex = (currentIndex + 1) % images.length;
+      image.src = images[currentIndex];
+    }
+  </script>
+</body>
+</html>
